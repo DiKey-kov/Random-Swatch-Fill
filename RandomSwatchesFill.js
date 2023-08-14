@@ -12,7 +12,13 @@ if (mySelection instanceof Array)
 				selItem = mySelection[i];
 				selItem.filled = true;
 
+				var randomNum = Math.random();
+				    if (randomNum <= 0.75) 
+				    {
+					    swatchIndex = 0;
+				    } else {
 				swatchIndex = Math.round( Math.random() * (selSwatches.length - 1 ));
+				    }
 				
 				if(selItem.typename == "PathItem")
 					selItem.fillColor = selSwatches[swatchIndex].color;
